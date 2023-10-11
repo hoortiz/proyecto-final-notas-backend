@@ -13,11 +13,11 @@ mongoose.connect('mongodb://127.0.0.1:27017/notas')
 })
 
 // Configuracion del puerto en el que va a correr el API
-app.set('PORT', 5001)
+app.set('PORT', 80)
 
 app.use(morgan('dev'))
 app.use(expres.json())
-app.use(cors({origin: ['http://localhost:3000']}))
+app.use(cors({origin: ['http://168.227.245.3']}))
 
 app.use('/api/',router)
 
